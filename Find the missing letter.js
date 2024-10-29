@@ -29,3 +29,9 @@ function findMissingLetter(array) {
 }
 
 // or
+
+const findMissingLetter = (array) => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const start = alphabet.indexOf(array[0]);
+  return alphabet.slice(start, start + array.length).find(el => !array.includes(el));
+};
